@@ -1,5 +1,10 @@
 package com.sparta.ge;
 
+import com.sparta.ge.methods.BubbleSort;
+import com.sparta.ge.methods.InsertionSort;
+import com.sparta.ge.methods.MergeSort;
+import com.sparta.ge.methods.QuickSort;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -24,7 +29,6 @@ public class App
         } while (sortedMethodNum<1 || sortedMethodNum>5);
 
 
-        System.out.println();
 
         int arraySize;
         do{
@@ -32,33 +36,36 @@ public class App
         arraySize = scanner2.nextInt();
         } while (arraySize<=0);
 
-        System.out.println();
 
+        int[] arrayToSort = randomArray(arraySize);
 
         String sortedMethod = "";
 
         if(sortedMethodNum == 1){
-            sortedMethod = "Binary Sorter";
+            sortedMethod = "Binary Sort";
         }
         else if(sortedMethodNum == 2){
-            sortedMethod = "Bubble Sorter";
+            sortedMethod = "Bubble Sort";
         }
         else if(sortedMethodNum == 3){
-            sortedMethod = "Insertion Sorter";
+            sortedMethod = "Insertion Sort";
         }
         else if(sortedMethodNum == 4){
-            sortedMethod = "Merge Sorter";
+            sortedMethod = "Merge Sort";
         }
         else if(sortedMethodNum == 5){
-            sortedMethod = "Quick Sorter";
+            sortedMethod = "Quick Sort";
         }
 
 
-        System.out.println("Sorting using the " + sortedMethod);
-        System.out.println("Before sorting:");
-        System.out.println(Arrays.toString(randomArray(arraySize)));
+        System.out.println("Sorting using the " + sortedMethod + " method");
+        System.out.println("Before sorting: ");
+        System.out.println(Arrays.toString(arrayToSort));
         System.out.println("After sorting: ");
+        QuickSort insertionSort = new QuickSort();
+        int[] sortedArray = insertionSort.quickSortMethod(arrayToSort, 0, arraySize-1);
 
+        System.out.println(Arrays.toString(sortedArray));
     }
 
     public static int[] randomArray(int arraySize){
@@ -71,4 +78,9 @@ public class App
         }
         return numbers;
     }
+
+
+
+
+
 }
