@@ -1,6 +1,6 @@
-package com.sparta.ge.methods;
+package com.sparta.ge.sorters;
 
-public class BubbleSort {
+public class BubbleSort implements Sorter {
 
     public int[] bubbleSortMethod(int[] randomArrayToSort){
         int length = randomArrayToSort.length;

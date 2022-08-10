@@ -1,6 +1,6 @@
-package com.sparta.ge.methods;
+package com.sparta.ge.sorters;
 
-public class MergeSort {
+public class MergeSort implements Sorter {
 
     public int[] merge(int[] array, int left, int middle, int right){
         int num1 = middle - left + 1;

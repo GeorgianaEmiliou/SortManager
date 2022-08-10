@@ -1,6 +1,6 @@
-package com.sparta.ge.methods;
+package com.sparta.ge.sorters;
 
-public class InsertionSort {
+public class InsertionSort implements Sorter{
 
     public int[] insertionSortMethod(int[] randomArrayToSort){
         int length = randomArrayToSort.length;

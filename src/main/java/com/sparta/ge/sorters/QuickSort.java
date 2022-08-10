@@ -1,6 +1,6 @@
-package com.sparta.ge.methods;
+package com.sparta.ge.sorters;
 
-public class QuickSort {
+public class QuickSort implements Sorter{
 
     public static void swap(int[] array, int i, int j){
         int temp = array[i];

@@ -1,9 +1,6 @@
-package com.sparta.ge;
+package com.sparta.ge.start;
 
-import com.sparta.ge.methods.BubbleSort;
-import com.sparta.ge.methods.InsertionSort;
-import com.sparta.ge.methods.MergeSort;
-import com.sparta.ge.methods.QuickSort;
+import com.sparta.ge.sorters.QuickSort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -78,9 +75,4 @@ public class App
         }
         return numbers;
     }
-
-
-
-
-
 }
