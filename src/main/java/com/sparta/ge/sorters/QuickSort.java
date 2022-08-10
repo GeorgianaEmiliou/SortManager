@@ -30,4 +30,10 @@ public class QuickSort implements Sorter{
         }
         return randomArrayToSort;
     }
+
+    @Override
+    public int[] sortArray(int[] arrayToSort) {
+        arrayToSort = quickSortMethod(arrayToSort, 0, arrayToSort.length-1);
+        return arrayToSort;
+    }
 }

@@ -1,9 +1,14 @@
-/*
-package com.sparta.ge.methods;
+package com.sparta.ge.sorters;
 
-public class BinarySort {
+import com.sparta.ge.sorters.Sorter;
 
-    public int[] binarySort(int[] array){
+public class BinarySort implements Sorter {
+    @Override
+    public int[] sortArray(int[] arrayToSort) {
+        return new int[0];
+    }
+
+    /*public int[] binarySort(int[] array){
         boolean swapped = true;
         int start = 0;
         int end = array.length;
@@ -22,7 +27,6 @@ public class BinarySort {
                 break;
             }
         }
-    }
+    }*/
 
 }
-*/

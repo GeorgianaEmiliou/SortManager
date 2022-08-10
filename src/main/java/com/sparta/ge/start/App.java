@@ -1,6 +1,7 @@
 package com.sparta.ge.start;
 
-import com.sparta.ge.sorters.QuickSort;
+import com.sparta.ge.exceptions.SorterLoaderException;
+import com.sparta.ge.sorters.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -9,9 +10,9 @@ import java.util.Scanner;
 
 public class App 
 {
-    public static void main( String[] args ) {
-        Scanner scanner1 = new Scanner(System.in);
-        Scanner scanner2 = new Scanner(System.in);
+    public static void main( String[] args ) throws SorterLoaderException {
+        Scanner scanner = new Scanner(System.in);
+
         int sortedMethodNum;
 
         do {
@@ -22,7 +23,7 @@ public class App
             System.out.println("4. Merge Sorter");
             System.out.println("5. Quick Sorter");
             System.out.print("Please enter the number of the sorter method you wish to use: ");
-            sortedMethodNum = scanner1.nextInt();
+            sortedMethodNum = scanner.nextInt();
         } while (sortedMethodNum<1 || sortedMethodNum>5);
 
 
@@ -30,13 +31,14 @@ public class App
         int arraySize;
         do{
         System.out.print("Please enter the size of array you wish to generate: ");
-        arraySize = scanner2.nextInt();
+        arraySize = scanner.nextInt();
         } while (arraySize<=0);
 
 
         int[] arrayToSort = randomArray(arraySize);
 
         String sortedMethod = "";
+
 
         if(sortedMethodNum == 1){
             sortedMethod = "Binary Sort";
@@ -50,19 +52,23 @@ public class App
         else if(sortedMethodNum == 4){
             sortedMethod = "Merge Sort";
         }
-        else if(sortedMethodNum == 5){
+        else {
             sortedMethod = "Quick Sort";
         }
 
 
+        SortFactory sortFactory = new SortFactory();
         System.out.println("Sorting using the " + sortedMethod + " method");
         System.out.println("Before sorting: ");
         System.out.println(Arrays.toString(arrayToSort));
+        double start = System.nanoTime();
+        int[] sortedArray = sortFactory.getSorter(sortedMethodNum).sortArray(arrayToSort);
+        double finish = System.nanoTime();
         System.out.println("After sorting: ");
-        QuickSort insertionSort = new QuickSort();
-        int[] sortedArray = insertionSort.quickSortMethod(arrayToSort, 0, arraySize-1);
-
         System.out.println(Arrays.toString(sortedArray));
+        double timeTaken = finish - start;
+        System.out.println("Time taken: " + timeTaken / 1_000_000 + " in milliseconds");
+
     }
 
     public static int[] randomArray(int arraySize){
