@@ -1,1 +1,3 @@
-# SortManager
+# SortManager Project
+
+##Instructions
