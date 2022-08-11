@@ -89,20 +89,19 @@ public class BinaryTree implements BinaryTreeInterface {
     }
 
     private void addNodesToTree(Node node, int[] elements){
-        for(int i=0; i<elements.length; i++){
-            if(elements[i] <= node.getValue()){
-                if(node.isLeftChildEmpty()){
-                    node.setLeftChild(new Node(elements[i]));
-                }
-                else{
+        for (int element : elements) {
+            if (element <= node.getValue()) {
+                if (node.isLeftChildEmpty()) {
+                    node.setLeftChild(new Node(element));
+                    numberOfNodes = numberOfNodes + 1;
+                } else {
                     addNodesToTree(node.getLeftChild(), elements);
                 }
-            }
-            else if(elements[i] > node.getValue()){
-                if(node.isRightChildEmpty()){
-                    node.setRightChild(new Node(elements[i]));
-                }
-                else{
+            } else if (element > node.getValue()) {
+                if (node.isRightChildEmpty()) {
+                    node.setRightChild(new Node(element));
+                    numberOfNodes = numberOfNodes + 1;
+                } else {
                     addNodesToTree(node.getRightChild(), elements);
                 }
             }
@@ -143,7 +142,7 @@ public class BinaryTree implements BinaryTreeInterface {
         return 1 + getNumberOfNodes(node.getLeftChild()) + getNumberOfNodes(node.getRightChild());
     }
 
-    /*private void insert(Node node, int element){
+    private void insert(Node node, int element){
         node = insertRec(node, element);
     }
 
@@ -159,7 +158,7 @@ public class BinaryTree implements BinaryTreeInterface {
             node.setRightChild(insertRec(node.getRightChild(), element));
         }
         return node;
-    }*/
+    }
 
 
 

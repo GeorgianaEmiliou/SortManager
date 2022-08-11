@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class">
+    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Implemented some methods in the BinaryTree to sort an array">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     "last_opened_file_path": "C:/Users/georgiana/IdeaProjects/SortManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.SortingTests.sortingUsingInsertionSort">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparta.ge.start.App" />
       <module name="SortManager" />
@@ -70,8 +69,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortingTests.sortingUsingInsertionSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SortManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.ge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sparta.ge" />
+      <option name="MAIN_CLASS_NAME" value="com.sparta.ge.SortingTests" />
+      <option name="METHOD_NAME" value="sortingUsingInsertionSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SortingTests.sortingUsingInsertionSort" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Logging" />
       </list>
@@ -128,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660230841700</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented some methods in the BinaryTree to sort an array">
+      <created>1660236804634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660236804634</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +172,7 @@
     <MESSAGE value="Organised the code by creating some extra packages and classes" />
     <MESSAGE value="Implemented some more methods." />
     <MESSAGE value="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class" />
+    <MESSAGE value="Implemented some methods in the BinaryTree to sort an array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented some methods in the BinaryTree to sort an array" />
   </component>
 </project>
