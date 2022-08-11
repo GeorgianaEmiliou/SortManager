@@ -1,4 +1,4 @@
 package com.sparta.ge.exceptions;
 
-public class ChildNotFoundException {
+public class ChildNotFoundException extends Throwable{
 }

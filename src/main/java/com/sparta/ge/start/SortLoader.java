@@ -1,22 +1,46 @@
 package com.sparta.ge.start;
 
 import com.sparta.ge.display.DisplayManager;
+import com.sparta.ge.exceptions.SorterLoaderException;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class SortLoader {
-    public static Scanner scanner = new Scanner(System.in);
-    public static DisplayManager displayManager = new DisplayManager();
 
-    public static void main() {
+    public void start() throws SorterLoaderException {
+
+        Scanner scanner = new Scanner(System.in);
+
         int sortedMethodNum;
+
         do {
-            displayManager.printOptions();
-            System.out.print("Please enter the number of the sorter method you wish to use: ");
+            DisplayManager.printOptions();
             sortedMethodNum = scanner.nextInt();
         } while (sortedMethodNum < 1 || sortedMethodNum > 5);
+
+
+        int arraySize;
+        do {
+            DisplayManager.printArraySize();
+            arraySize = scanner.nextInt();
+        } while (arraySize <= 0);
+
+
+        int[] arrayToSort = randomArray(arraySize);
+
+
+        DisplayManager.printSortingMethod(sortedMethodNum);
+        DisplayManager.printArrayBeforeSorting(arrayToSort);
+        double start = System.nanoTime();
+        int[] sortedArray = SortFactory.getSorter(sortedMethodNum).sortArray(arrayToSort);
+        double finish = System.nanoTime();
+        DisplayManager.printArrayAfterSorting(sortedArray);
+        double timeTaken = finish - start;
+        DisplayManager.printTimeTaken(timeTaken);
+
     }
+
 
     public static int[] randomArray(int arraySize) {
         int min = 1;
@@ -31,12 +55,3 @@ public class SortLoader {
 }
 
 
-
-
-    /*public void runSorters(Sorter sorter, int[] array){
-        double start = System.nanoTime();
-        sorter.sortArray(array);
-        double finish = System.nanoTime();
-        double timeTaken = finish - start;
-        System.out.println("Time taken: " + timeTaken / 1_000_000 + " in milliseconds");
-    }*/

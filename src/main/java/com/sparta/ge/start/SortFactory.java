@@ -5,7 +5,7 @@ import com.sparta.ge.sorters.*;
 
 public class SortFactory {
 
-    public Sorter getSorter(int input) throws SorterLoaderException{
+    public static Sorter getSorter(int input) throws SorterLoaderException{
         if(input == 1){
             return new BinarySort();
         }

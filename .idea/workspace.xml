@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Organised the code by creating some extra packages and classes">
+    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Implemented some more methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/exceptions/ChildNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/exceptions/ChildNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTreeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTreeInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/ge/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +45,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/georgiana/IdeaProjects/JavaArrays"
+    "last_opened_file_path": "C:/Users/georgiana/IdeaProjects/SortManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparta.ge.start.App" />
       <module name="SortManager" />
@@ -64,9 +62,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Logging" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sparta.ge.logging.Logging" />
+      <module name="SortManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.ge.logging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Logging" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660140483674</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented some more methods.">
+      <created>1660169336859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660169336859</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +145,7 @@
     <MESSAGE value="Started working on the project" />
     <MESSAGE value="Implemented some sort methods" />
     <MESSAGE value="Organised the code by creating some extra packages and classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organised the code by creating some extra packages and classes" />
+    <MESSAGE value="Implemented some more methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented some more methods." />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.sparta.ge.sorters.binaryTree;
 
+import com.sparta.ge.exceptions.ChildNotFoundException;
+
 public class BinaryTree implements BinaryTreeInterface {
     private final Node rootNode;
 
@@ -34,6 +36,19 @@ public class BinaryTree implements BinaryTreeInterface {
         }
         return false;
     }
+
+    @Override
+    public int getLeftChild(int element) throws ChildNotFoundException {
+        Node node = findNode(element);
+        return node.getLeftChild().getValue();
+    }
+
+    @Override
+    public int getRightChild(int element) throws ChildNotFoundException {
+        Node node = findNode(element);
+        return node.getRightChild().getValue();
+    }
+
 
     @Override
     public int[] getSortedTreeAsc() {
@@ -84,7 +99,6 @@ public class BinaryTree implements BinaryTreeInterface {
             }
         }
     }
-
 
     private Node findNode(int element){
         Node node = rootNode;
