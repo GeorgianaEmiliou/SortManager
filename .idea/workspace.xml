@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Implemented some more methods.">
+    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/exceptions/ChildNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/exceptions/ChildNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTreeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTreeInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660169336859</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class">
+      <created>1660230841700</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660230841700</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +148,7 @@
     <MESSAGE value="Implemented some sort methods" />
     <MESSAGE value="Organised the code by creating some extra packages and classes" />
     <MESSAGE value="Implemented some more methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented some more methods." />
+    <MESSAGE value="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Managed to make it in the MVC structure. Also, logging added to the BubbleSort.java class" />
   </component>
 </project>

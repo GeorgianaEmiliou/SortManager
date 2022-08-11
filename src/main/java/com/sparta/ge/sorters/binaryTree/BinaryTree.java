@@ -4,6 +4,10 @@ import com.sparta.ge.exceptions.ChildNotFoundException;
 
 public class BinaryTree implements BinaryTreeInterface {
     private final Node rootNode;
+    public int count;
+    public int[] sortedTree;
+
+    int numberOfNodes = 1;
 
     public BinaryTree(int elements){
         rootNode = new Node(elements);
@@ -52,7 +56,10 @@ public class BinaryTree implements BinaryTreeInterface {
 
     @Override
     public int[] getSortedTreeAsc() {
-        return new int[0];
+        sortedTree = new int[numberOfNodes];
+        count = 0;
+        sortTreeAsc(rootNode);
+        return sortedTree;
     }
 
     @Override
@@ -64,6 +71,7 @@ public class BinaryTree implements BinaryTreeInterface {
         if(element <= node.getValue()){
             if(node.isLeftChildEmpty()){
                 node.setLeftChild(new Node(element));
+                numberOfNodes = numberOfNodes + 1;
             }
             else{
                 addNodeToTree(node.getLeftChild(), element);
@@ -72,6 +80,7 @@ public class BinaryTree implements BinaryTreeInterface {
         else if(element > node.getValue()){
             if(node.isRightChildEmpty()){
                 node.setRightChild(new Node(element));
+                numberOfNodes = numberOfNodes + 1;
             }
             else{
                 addNodeToTree(node.getRightChild(), element);
@@ -114,6 +123,17 @@ public class BinaryTree implements BinaryTreeInterface {
             }
         }
         return null;
+    }
+
+    private void sortTreeAsc(Node node){
+        if(!node.isLeftChildEmpty()){
+            sortTreeAsc(node.getLeftChild());
+        }
+        sortedTree[count] = node.getValue();
+        count = count + 1;
+        if(!node.isRightChildEmpty()){
+            sortTreeAsc(node.getRightChild());
+        }
     }
 
     private int getNumberOfNodes(Node node){
