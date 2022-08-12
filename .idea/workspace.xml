@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Tests have been implemented">
+    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Fixed some issues in the Binary Sort class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/binaryTree/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660300930259</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed some issues in the Binary Sort class">
+      <created>1660301821701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660301821701</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +247,7 @@
     <MESSAGE value="SortingTests added" />
     <MESSAGE value="Loggers added to the sorting methods" />
     <MESSAGE value="Tests have been implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests have been implemented" />
+    <MESSAGE value="Fixed some issues in the Binary Sort class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues in the Binary Sort class" />
   </component>
 </project>
