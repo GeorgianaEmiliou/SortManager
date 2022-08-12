@@ -45,6 +45,6 @@ public class DisplayManager {
     }
 
     public static void printTimeTaken(double timeTaken){
-        System.out.println("Time taken: " + timeTaken / 1_000_000 + " in milliseconds");
+        System.out.println("Time taken: " + timeTaken / 1_000_000 + " in nanoseconds");
     }
 }

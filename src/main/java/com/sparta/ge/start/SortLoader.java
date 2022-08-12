@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class SortLoader {
 
-    public void start() throws SorterLoaderException {
+    public static void start() throws SorterLoaderException {
 
         Scanner scanner = new Scanner(System.in);
 

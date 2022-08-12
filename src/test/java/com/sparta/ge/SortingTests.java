@@ -1,34 +1,83 @@
 package com.sparta.ge;
 
-import com.sparta.ge.sorters.BubbleSort;
-import com.sparta.ge.sorters.InsertionSort;
-import com.sparta.ge.sorters.MergeSort;
-import com.sparta.ge.sorters.QuickSort;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import com.sparta.ge.exceptions.SorterLoaderException;
+import com.sparta.ge.sorters.*;
+import com.sparta.ge.start.SortFactory;
+import org.junit.jupiter.api.*;
+
+import java.util.Random;
 
 public class SortingTests {
-    InsertionSort insertionSort = new InsertionSort();
-    BubbleSort bubbleSort = new BubbleSort();
-    MergeSort mergeSort = new MergeSort();
-    QuickSort quickSort = new QuickSort();
+    private static Sorter sorter;
+    private int[] unsortedArray;
 
-    @Test
-    @DisplayName("Sort an array using insertion sort")
-    public void sortingUsingInsertionSort(){
-        int[] array = {3, 1, 9, 4, 2, 7};
-        int[] sortedArray = {1, 2, 3, 4, 7, 9};
-        int[] answer = insertionSort.sortArray(array);
-        Assertions.assertArrayEquals(sortedArray, answer);
+    @BeforeAll
+    public static void setClass() throws SorterLoaderException{
+        sorter = SortFactory.getSorter(3);
+        System.out.println("Testing using " + sorter);
+    }
+
+    @BeforeEach
+    public void setup(){
+        Random random = new Random();
+        unsortedArray = new int[10];
+        for(int i=0; i<unsortedArray.length; i++){
+            unsortedArray[i] = random.nextInt(100);
+        }
     }
 
     @Test
-    @DisplayName("Sort an array using bubble sort")
-    public void sortingUsingBubbleSort(){
-        int[] array = {300, 101, 954, 944, 221, 217};
-        int[] sortedArray = {101, 217, 221, 300, 944, 954};
-        int[] answer = bubbleSort.sortArray(array);
-        Assertions.assertArrayEquals(sortedArray, answer);
+    @DisplayName("Test if the array is sorted")
+    public void testIsSorted(){
+        int[] sorted = sorter.sortArray(unsortedArray);
+        for(int i=0; i<sorted.length-1; i++){
+            Assertions.assertTrue(sorted[i] <= sorted[i+1]);
+        }
+    }
+
+    @Test
+    @DisplayName("Test odd sized array")
+    public void testOddSize(){
+        int[] unsorted = {4, 7, 2, 1, 8};
+        int[] sorted = sorter.sortArray(unsorted);
+        Assertions.assertEquals(unsorted.length, sorted.length);
+        Assertions.assertEquals(1, sorted.length%2);
+        for(int i=0; i<sorted.length-1; i++) {
+            Assertions.assertTrue(sorted[i] <= sorted[i + 1]);
+        }
+    }
+
+    @Test
+    @DisplayName("Test even sized array")
+    public void testEvenSize(){
+        int[] unsorted = {4, 8, 2, 1, 7, 16, 6, 9};
+        int[] sorted = sorter.sortArray(unsorted);
+        Assertions.assertEquals(unsorted.length, sorted.length);
+        Assertions.assertEquals(0, sorted.length%2);
+        for(int i=0; i<sorted.length-1; i++) {
+            Assertions.assertTrue(sorted[i] <= sorted[i + 1]);
+        }
+    }
+
+    @Test
+    @DisplayName("Test array with duplicates")
+    public void testArrayWithDuplicates(){
+        int[] unsorted = {4, 6, 4, 7, 8, 1, 6};
+        int[] sorted = sorter.sortArray(unsorted);
+        Assertions.assertEquals(unsorted.length, sorted.length);
+        for(int i=0; i<sorted.length-1; i++) {
+            Assertions.assertTrue(sorted[i] <= sorted[i + 1]);
+        }
+    }
+
+    @Test
+    @DisplayName("Test array with one element")
+    public void testArrayWithOneElement(){
+        int[] unsorted = {4};
+        int[] sorted = sorter.sortArray(unsorted);
+        Assertions.assertEquals(unsorted.length, sorted.length);
+        for(int i=0; i<sorted.length-1; i++) {
+            Assertions.assertTrue(sorted[i] <= sorted[i + 1]);
+        }
     }
 }
