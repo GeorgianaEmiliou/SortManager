@@ -164,17 +164,7 @@ public class PerformanceTests {
     @Test
     @DisplayName("Sort an empty array using bubble sort")
     public void sortingEmptyArrayUsingBubbleSort(){
-        sorter = new BinarySort();
-        int[] array = {};
-        int[] sortedArray = {};
-        int[] answer = sorter.sortArray(array);
-        Assertions.assertArrayEquals(sortedArray, answer);
-    }
-
-    @Test
-    @DisplayName("Sort an empty array using binary sort")
-    public void sortingEmptyArrayUsingBinarySort(){
-        sorter = new BinarySort();
+        sorter = new BubbleSort();
         int[] array = {};
         int[] sortedArray = {};
         int[] answer = sorter.sortArray(array);
