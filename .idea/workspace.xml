@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Loggers added to the sorting methods">
+    <list default="true" id="5a2f7fc9-a159-469d-af8a-de77de60b930" name="Changes" comment="Tests have been implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/display/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/Sorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/start/SortLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/ge/SortingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/ge/SortingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/ge/sorters/BinarySort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,20 @@
     "last_opened_file_path": "C:/Users/georgiana/IdeaProjects/SortManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PerformanceTests">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sparta.ge.start.App" />
+      <module name="SortManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.ge.start.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PerformanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SortManager" />
       <extension name="coverage">
@@ -109,29 +117,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortingTests.testArrayWithOneElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SortManager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sparta.ge.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sparta.ge" />
-      <option name="MAIN_CLASS_NAME" value="com.sparta.ge.SortingTests" />
-      <option name="METHOD_NAME" value="testArrayWithOneElement" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.PerformanceTests" />
         <item itemvalue="JUnit.PerformanceTests.sortingUsingBubbleSort" />
         <item itemvalue="JUnit.PerformanceTests.sortingUsingInsertionSort" />
         <item itemvalue="JUnit.SortingTests" />
-        <item itemvalue="JUnit.SortingTests.testArrayWithOneElement" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660296255483</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Tests have been implemented">
+      <created>1660300908151</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660300908151</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Tests have been implemented">
+      <created>1660300930259</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660300930259</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +237,7 @@
     <MESSAGE value="Implemented some methods in the BinaryTree to sort an array" />
     <MESSAGE value="SortingTests added" />
     <MESSAGE value="Loggers added to the sorting methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loggers added to the sorting methods" />
+    <MESSAGE value="Tests have been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests have been implemented" />
   </component>
 </project>
