@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class BubbleSort implements Sorter {
 
     private static final Logger logger = Logger.getLogger("my logger");
-    private static ConsoleHandler consoleHandler = new ConsoleHandler();
+    private static final ConsoleHandler consoleHandler = new ConsoleHandler();
 
     @Override
     public int[] sortArray(int[] arrayToSort) {

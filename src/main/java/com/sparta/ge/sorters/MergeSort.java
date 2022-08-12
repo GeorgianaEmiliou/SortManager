@@ -1,6 +1,14 @@
 package com.sparta.ge.sorters;
 
+import com.sparta.ge.logging.CustomFormatter;
+
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MergeSort implements Sorter {
+    private static final Logger logger = Logger.getLogger("my logger");
+    private static final ConsoleHandler consoleHandler = new ConsoleHandler();
 
     public void merge(int[] array, int left, int middle, int right){
         int num1 = middle - left + 1;
@@ -56,7 +64,11 @@ public class MergeSort implements Sorter {
 
     @Override
     public int[] sortArray(int[] arrayToSort) {
+        consoleHandler.setFormatter(new CustomFormatter());
+        logger.log(Level.INFO, "Method sortArray has started");
+        logger.log(Level.INFO, "Method calls the merge sort method");
         mergeSortMethod(arrayToSort, 0, arrayToSort.length - 1);
+        logger.log(Level.INFO, "Method ends");
         return arrayToSort;
     }
 }
